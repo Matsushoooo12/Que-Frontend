@@ -58,7 +58,7 @@ export const Home: VFC = () => {
       <Box mb="40px">
         <Heading mb="16px">新規アンケート作成</Heading>
         <form>
-          <InputGroup w="500px">
+          <InputGroup w="300px">
             <Input
               placeholder="title"
               type="text"
@@ -84,7 +84,7 @@ export const Home: VFC = () => {
           <Box
             border="1px solid black"
             display="inline-block"
-            width="500px"
+            width="300px"
             p="24px"
             borderRadius="md"
             mb="24px"
