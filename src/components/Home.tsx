@@ -80,17 +80,18 @@ export const Home: VFC = () => {
         </form>
       </Box>
       {posts.map((post) => (
-        <Box
-          border="1px solid black"
-          display="inline-block"
-          width="500px"
-          p="24px"
-          borderRadius="md"
-          key={post.id}
-          mb="24px"
-          cursor="pointer"
-        >
-          <Text>{post.title}</Text>
+        <Box display="block" key={post.id}>
+          <Box
+            border="1px solid black"
+            display="inline-block"
+            width="500px"
+            p="24px"
+            borderRadius="md"
+            mb="24px"
+            cursor="pointer"
+          >
+            <Text>{post.title}</Text>
+          </Box>
         </Box>
       ))}
     </Box>
