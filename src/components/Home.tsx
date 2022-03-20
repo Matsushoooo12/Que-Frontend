@@ -54,11 +54,17 @@ export const Home: VFC = () => {
     handleGetAllPosts();
   }, []);
   return (
-    <Box mt="24px" ml="24px">
-      <Box mb="40px">
-        <Heading mb="16px">新規アンケート作成</Heading>
+    <Box pl="24px">
+      <Box
+        pt="40px"
+        position="fixed"
+        zIndex="10"
+        bg="white"
+        borderBottom="1px solid black"
+      >
+        <Heading pb="16px">新規アンケート作成</Heading>
         <form>
-          <InputGroup w="300px">
+          <InputGroup w="300px" pb="24px">
             <Input
               placeholder="title"
               type="text"
@@ -79,21 +85,23 @@ export const Home: VFC = () => {
           </InputGroup>
         </form>
       </Box>
-      {posts.map((post) => (
-        <Box display="block" key={post.id}>
-          <Box
-            border="1px solid black"
-            display="inline-block"
-            width="300px"
-            p="24px"
-            borderRadius="md"
-            mb="24px"
-            cursor="pointer"
-          >
-            <Text>{post.title}</Text>
+      <Box pt="200px">
+        {posts.map((post) => (
+          <Box display="block" key={post.id}>
+            <Box
+              border="1px solid black"
+              display="inline-block"
+              width="300px"
+              p="24px"
+              borderRadius="md"
+              mb="24px"
+              cursor="pointer"
+            >
+              <Text>{post.title}</Text>
+            </Box>
           </Box>
-        </Box>
-      ))}
+        ))}
+      </Box>
     </Box>
   );
 };
